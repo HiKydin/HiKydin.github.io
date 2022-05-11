@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Git学习笔记 | Hi,XXhei</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="GitStudy学习Git的笔记  一.版本控制1.1 Git和SVN最主要的区别（面试常考）SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而工作的时候，用的都是自己的电脑，所以首先要从中央服务器得到最新的版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git学习笔记">
+<meta property="og:url" content="http://example.com/2022/05/09/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hi,XXhei">
+<meta property="og:description" content="GitStudy学习Git的笔记  一.版本控制1.1 Git和SVN最主要的区别（面试常考）SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而工作的时候，用的都是自己的电脑，所以首先要从中央服务器得到最新的版">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Library/Project/GitStudy/Install.jpg">
+<meta property="og:image" content="c:/Library/Project/GitStudy/GitFile.jpg">
+<meta property="og:image" content="c:/Library/Project/GitStudy/GitWorking.png">
+<meta property="og:image" content="c:/Library/Project/GitStudy/Gitmingling.png">
+<meta property="article:published_time" content="2022-05-09T02:54:19.000Z">
+<meta property="article:modified_time" content="2022-05-11T07:03:36.855Z">
+<meta property="article:author" content="XXhei">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Library/Project/GitStudy/Install.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hi,XXhei" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hi,XXhei</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Hi,XXhei</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Git学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/09/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2022-05-09T02:54:19.000Z" itemprop="datePublished">2022-05-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Git学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="GitStudy"><a href="#GitStudy" class="headerlink" title="GitStudy"></a>GitStudy</h1><p>学习Git的笔记 </p>
+<h2 id="一-版本控制"><a href="#一-版本控制" class="headerlink" title="一.版本控制"></a>一.版本控制</h2><h3 id="1-1-Git和SVN最主要的区别（面试常考）"><a href="#1-1-Git和SVN最主要的区别（面试常考）" class="headerlink" title="1.1 Git和SVN最主要的区别（面试常考）"></a>1.1 Git和SVN最主要的区别（面试常考）</h3><p>SVN是<strong>集中式版本控制系统</strong>，版本库是集中放在<strong>中央服务器</strong>的，而工作的时候，用的都是自己的电脑，所以首先要从中央服务器得到最新的版<span id="more"></span></p>
+<p>本，然后工作，完成工作后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必循联网才能工作，对网络带宽要求比较高。</p>
+<p>Git是<strong>分布式版本控制系统</strong>，没有中央服务器，每个人的电脑就是一个完整的版本库，工作的时候无需联网。协同的方法是这样的：当你在自己的电脑上修改了文件A，其他人也修改了文件A，只需互相把各自的修改push给对方，就可以互相看到对方的修改了。但是每个人都有完整的代码，可能会有安全隐患 。<br><code>Git是目前世界上最先进的分布式版本控制系统</code></p>
+<h2 id="二-安装"><a href="#二-安装" class="headerlink" title="二.安装"></a>二.安装</h2><p>安装软件后有三个程序，分别是：</p>
+<p><img src="C:\Library\Project\GitStudy\Install.jpg"></p>
+<ul>
+<li><strong>Git Bash</strong>：Linux风格的命令行  </li>
+<li><strong>Git CMD</strong>：Windows风格的命令行  </li>
+<li><strong>Git GUI</strong>：图形界面的Git</li>
+</ul>
+<h3 id="2-1必要配置"><a href="#2-1必要配置" class="headerlink" title="2.1必要配置"></a>2.1必要配置</h3><p>查看配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>查看系统配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+
+<p>查看用户配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<p><code>安装后的第一步就是设置用户名和邮箱</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global usern.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>删除某个配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset user.name //删除用户名</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-github设置添加ssh"><a href="#2-2-github设置添加ssh" class="headerlink" title="2.2 github设置添加ssh"></a>2.2 github设置添加ssh</h2><h5 id="1、首先需要检查你的电脑是否已经有ssh-key"><a href="#1、首先需要检查你的电脑是否已经有ssh-key" class="headerlink" title="1、首先需要检查你的电脑是否已经有ssh key"></a>1、首先需要检查你的电脑是否已经有ssh key</h5><p>运行git bash，输入如下代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>这两个命令就是检查是否已经存在<strong>id_rsa.pub</strong>或者<strong>id_dsa.pub</strong>文件，如果文件已经存在，那么你可以跳过步骤2，直接进入步骤3。</p>
+<p>PS：如果提示没有.ssh目录，请手动创建。</p>
+<h5 id="2、创建一个ssh-key"><a href="#2、创建一个ssh-key" class="headerlink" title="2、创建一个ssh key"></a>2、创建一个ssh key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>代码参数含义：</p>
+<p>-t 指定密钥类型，默认是 rsa ，可以省略。<br>-C 设置注释文字，比如邮箱。<br>-f 指定密钥文件存储文件名。</p>
+<p>以上代码省略了 -f 参数，因此，运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line"># Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]</span><br></pre></td></tr></table></figure>
+
+<p>当然，你也可以不输入文件名，使用默认文件名（推荐），那么就会生成 id_rsa 和 id_rsa.pub 两个秘钥文件。</p>
+<p>接着又会提示你输入两次密码（该密码是你push文件的时候要输入的密码，而不是github管理者的密码），</p>
+<p>当然，你也可以不输入密码，直接按回车。那么push的时候就不需要输入密码，直接提交到github上了，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line"># Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+
+<p>接下来，就会显示如下代码提示，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /c/Users/you/.ssh/id_rsa.</span><br><span class="line"># Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line"># The key fingerprint is:</span><br><span class="line"># 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</span><br></pre></td></tr></table></figure>
+
+<p>当你看到上面这段代码，那就说明，你的 SSH key 已经创建成功，你只需要添加到github的SSH key上就可以了。</p>
+<h5 id="3、添加你的-SSH-key-到-github上面去"><a href="#3、添加你的-SSH-key-到-github上面去" class="headerlink" title="3、添加你的 SSH key 到 github上面去"></a>3、添加你的 SSH key 到 github上面去</h5><p>a、首先你需要拷贝 id_rsa.pub 文件的内容，你可以用编辑器打开文件复制，也可以用git命令复制该文件的内容，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>Window 使用 clip 命令复制，Mac 则使用 pbcopy 命令，也可以手动打开 <strong>id_rsa.pub</strong> 进行复制。</p>
+<p>b、登录你的github账号，从右上角的设置（ <a target="_blank" rel="noopener" href="https://github.com/settings">Account Settings</a> ）进入，然后点击菜单栏的 SSH key 进入页面添加 SSH key。</p>
+<p>![](C:\Library\Project\GitStudy\添加 SSH key.jpg))</p>
+<p>c、点击 Add SSH key 按钮添加一个 SSH key 。把你复制的 SSH key 代码粘贴到 key 所对应的输入框中，记得 SSH key 代码的前后不要留有空格或者回车。当然，上面的 Title 所对应的输入框你也可以输入一个该 SSH key 显示在 github 上的一个别名。默认的会使用你的邮件名称。</p>
+<h5 id="4、测试一下该SSH-key"><a href="#4、测试一下该SSH-key" class="headerlink" title="4、测试一下该SSH key"></a>4、测试一下该SSH key</h5><p>在git Bash 中输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>当你输入以上代码时，会有一段警告代码，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &#x27;github.com (207.97.227.239)&#x27; can&#x27;t be established.</span><br><span class="line"># RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line"># Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure>
+
+<p>这是正常的，你输入 yes 回车既可。如果你创建 SSH key 的时候设置了密码，接下来就会提示你输入密码，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase for key &#x27;/c/Users/Administrator/.ssh/id_rsa&#x27;:</span><br></pre></td></tr></table></figure>
+
+<p>当然如果你密码输错了，会再要求你输入，知道对了为止。</p>
+<p>注意：输入密码时如果输错一个字就会不正确，使用删除键是无法更正的。</p>
+<p>密码正确后你会看到下面这段话，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not</span><br><span class="line"># provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>如果用户名是正确的,你已经成功设置SSH密钥。如果你看到 “access denied” ，者表示拒绝访问，那么你就需要使用 https 去访问，而不是 SSH 。</p>
+<h2 id="三-Git基本理论（核心）"><a href="#三-Git基本理论（核心）" class="headerlink" title="三.Git基本理论（核心）"></a>三.Git基本理论（核心）</h2><blockquote>
+<p>工作区域</p>
+</blockquote>
+<p><img src="C:\Library\Project\GitStudy\GitFile.jpg"></p>
+<ul>
+<li><strong>Workspace</strong>：工作区，平时存放项目代码的地方  </li>
+<li><strong>Index&#x2F;Stage</strong>：暂存区，用于临时存放改动，事实上它只是一个文件，保存即将提交到文件列表的信息  </li>
+<li><strong>Repository</strong>：仓库区（或者本地仓库），就是安全存放数据的位置，这里有你提交到所有版本的数据。其中Head指向最新放入仓库的版本  </li>
+<li><strong>Remote</strong>：远程仓库，托管代码的服务器。</li>
+</ul>
+<blockquote>
+<p>工作流程</p>
+</blockquote>
+<p>git的工作流程一般是这样的：<br>1.在工作目录中添加、修改文件；<br>2.将需要进行版本管理的文件放入暂存区域；<br>3.将暂存区域的文件提交到git仓库。  </p>
+<p>因此，git管理的文件有三种状态：<code>已修改（modified）、已暂存（staged）、已提交（committed）</code></p>
+<p><img src="C:\Library\Project\GitStudy\GitWorking.png"></p>
+<h2 id="四-Git项目搭建"><a href="#四-Git项目搭建" class="headerlink" title="四.Git项目搭建"></a>四.Git项目搭建</h2><blockquote>
+<p>创建工作目录与常用命令</p>
+</blockquote>
+<p><img src="C:\Library\Project\GitStudy\Gitmingling.png"></p>
+<p>创建本地仓库的方法有两种：一种是创建全新的仓库，另一种是克隆远程仓库</p>
+<blockquote>
+<p>创建全新仓库</p>
+</blockquote>
+<p>1、创建全新的仓库，需要在需要管理的项目根目录执行Git命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//在当前目录新建一个Git代码库</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>2、执行后可以看到，多出一个隐藏的.git文件夹。</p>
+<blockquote>
+<p>克隆远程仓库</p>
+</blockquote>
+<p>将远程服务器上的仓库完全镜像到本地</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//克隆一个项目和它的整个代码历史（版本信息）</span><br><span class="line">git clone [需要克隆的仓库的网址]</span><br></pre></td></tr></table></figure>
+
+<h2 id="五-Git文件操作"><a href="#五-Git文件操作" class="headerlink" title="五.Git文件操作"></a>五.Git文件操作</h2><blockquote>
+<p>文件4种状态</p>
+</blockquote>
+<p>版本控制就是对文件的版本进行控制，要对文件进行修改、提交等操作，首先要知道文件当前处于什么状态</p>
+<ul>
+<li><strong>Untracked</strong>：未跟踪，此文件在文件夹中，但并没有加入到git库中，不参与版本控制，通过<code>git add</code>命令，状态变为<code>Staged</code>  </li>
+<li><strong>Unmodify</strong>：文件已经入库，未修改，即版本库中的文件快照内容与文件夹中完全一致，这种类型的文件有两种去处，如果它被修改，而变为<code>Modified</code>，如果使用<code>git rm</code>移出版本库，则变为<code>Untracked</code>文件  </li>
+<li><strong>Modified</strong>：文件已修改，仅仅是修改，并没有进行其他的操作，这个文件也有两个去处，通过<code>git add</code>可进入暂存<code>Staged</code>状态，使用<code>git checkout</code>则丢弃修改，返回到<code>Unmodify</code>状态，这个<code>git checkou</code>t即从库中取出文件，覆盖当前修改！</li>
+<li><strong>Staged</strong>：暂存状态。执行<code>git commit</code>则将修改同步到库中，这时候库中文件与本地文件又变为一致，文件变为<code>Unmodify</code>状态。执行<code>git reset HEAD filename</code>取消暂存，文件状态为<code>Modified</code></li>
+</ul>
+<blockquote>
+<p>查看文件状态</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status [filename]   //查看指定文件状态</span><br><span class="line">git status          //查看所有文件状态</span><br><span class="line">git add .             //添加所有文件到暂存区  </span><br><span class="line">git commit -m &quot;内容&quot;  //提交暂存区中的内容到本地仓库</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>忽略文件</p>
+</blockquote>
+<p>有时候我们不想把某些文件纳入版本控制中，可在主目录下建立”.gitignore”文件，该文件有如下规则</p>
+<p>1.忽略文件中的空行或以”#”开始的行会被忽略<br>2.可以使用Linux的通配符。例如”*”表示任意多个字符，”?”表示一个字符<br>3.如果名称的最前面有一个”!”，表示例外规则，将不被忽略  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*.txt    //忽略所有以.txt结尾的文件</span><br><span class="line">!lib.txt //但lib.txt除外</span><br><span class="line">/temp    //忽略根目录下的其他文件夹，不包括temp目录</span><br><span class="line">build/   //忽略build/目录下的所有文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="六-Git中的分支"><a href="#六-Git中的分支" class="headerlink" title="六.Git中的分支"></a>六.Git中的分支</h2><h3 id="Git中的分支类型"><a href="#Git中的分支类型" class="headerlink" title="Git中的分支类型"></a>Git中的分支类型</h3><h4 id="master-分支"><a href="#master-分支" class="headerlink" title="master 分支"></a>master 分支</h4><ul>
+<li>master 为产品主分支，该分支为只读唯一分支，也是用于部署生产环境的分支，需确保master分支的稳定性。</li>
+<li>master 分支一般由release分支或hotfix分支合并，任何情况下都不应该直接修改master分支代码。</li>
+<li>产品的功能全部实现后，最终在master分支对外发布，另外所有在master分支的推送应该打标签（tag）做记录，方便追溯。</li>
+<li>master 分支不可删除。</li>
+</ul>
+<h4 id="develop-分支"><a href="#develop-分支" class="headerlink" title="develop 分支"></a>develop 分支</h4><ul>
+<li>develop 为主开发分支，基于master分支创建，始终保持最新完成功能的代码以及bug修复后的代码。</li>
+<li>develop 分支为只读唯一分支，只能从其他分支合并，不可以直接在该分支做功能开发或bug修复。</li>
+<li>一般开发新功能时，feature分支都是基于develop分支下创建的。</li>
+<li>develop 分支包含所有要发布到下一个release的代码。</li>
+<li>feature功能分支完成后, 开发人员需合并到develop分支(不推送远程)，需先将develop分支合并到feature，解决完冲突后再合并到develop分支。</li>
+<li>当所有新功能开发完成后，开发人员并自测完成后，此时从develop拉取release分支，进行提测。</li>
+<li>release或hotfix 分支上线完成后, 开发人员需合并到develop分支并推送远程。</li>
+<li>develop 分支不可删。</li>
+</ul>
+<h4 id="feature-分支"><a href="#feature-分支" class="headerlink" title="feature 分支"></a>feature 分支</h4><ul>
+<li>feature 分支通常为新功能或新特性开发分支，以develop分支为基础创建feature分支。</li>
+</ul>
+<h4 id="release-分支"><a href="#release-分支" class="headerlink" title="release 分支"></a>release 分支</h4><ul>
+<li>release 分支为预上线分支，基于本次上线所有的feature分支合并到develop分支之后，从develop分支创建。</li>
+</ul>
+<h4 id="hotfix-分支"><a href="#hotfix-分支" class="headerlink" title="hotfix 分支"></a>hotfix 分支</h4><ul>
+<li>hotfix 分支为线上bug修复分支或叫补丁分支，主要用于对线上的版本进行bug修复。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//列出所有本地分支</span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line">//列出所有远程分支</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line">//新建一个分支，但依然停留在当前分支</span><br><span class="line">git branch [branch_name]</span><br><span class="line"></span><br><span class="line">//新建一个分支，并切换到该分支</span><br><span class="line">git checkout -b [branch]</span><br><span class="line"></span><br><span class="line">//合并指定分支到当前分支</span><br><span class="line">git merge [branch]</span><br><span class="line"></span><br><span class="line">//删除分支</span><br><span class="line">git branch -d [branch_name]</span><br><span class="line"></span><br><span class="line">//删除远程分支</span><br><span class="line">git push origin --delete [branch_name]</span><br><span class="line">git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
+
+<h2 id="七-日常使用git辅助开发的工作流"><a href="#七-日常使用git辅助开发的工作流" class="headerlink" title="七.日常使用git辅助开发的工作流"></a>七.日常使用git辅助开发的工作流</h2><p>新项目：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.在GitHub上创建仓库</span><br><span class="line">2.在克隆到本地</span><br><span class="line">3.本地工作完成后git add .添加到暂存区</span><br><span class="line">4.添加到暂存区后git commit -m &quot;提交信息&quot;提交到本地仓库</span><br><span class="line">5.提交到本地仓库后git push origin main提交到远程仓库</span><br></pre></td></tr></table></figure>
+
+<h2 id="八-常见问题及解决"><a href="#八-常见问题及解决" class="headerlink" title="八.常见问题及解决"></a>八.常见问题及解决</h2><p>1、OpenSSL SSL_read: Connection was reset, errno 10054</p>
+<blockquote>
+<p>解决：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2、如何删除github上的一个仓库里面的某个文件</p>
+<blockquote>
+<p>在gtihub上只能删除仓库，无法删除某个文件，所有只能通过命令来解决</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main           //拉去远程仓库的项目</span><br><span class="line">dir                            //查看有哪些文件夹</span><br><span class="line">git rm -r --cached test.md      //删除test.md文件</span><br><span class="line">git commit -m &quot;删除了test.md文件&quot;  //提交，添加操作说明</span><br><span class="line">git push -u origin main    //将本次更改更新到GitHub</span><br></pre></td></tr></table></figure>
+
+<p>3、error: failed to push some refs to ‘仓库地址url’</p>
+<blockquote>
+<p>这种情况一般是线上版本比你本地仓库里的那份还要新，所以无法push。解决办法如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">先拉再推</span><br><span class="line">git pull -rebase  //表示“内容抓下来后使用Rebase方式合并”，不加也行</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>4、remote: error: GH007: Your push would publish a private email address.<br>remote: You can make your email public or disable this protection by visiting:<br>remote: <a target="_blank" rel="noopener" href="http://github.com/settings/emails">http://github.com/settings/emails</a><br>To 仓库地址url<br> ! [remote rejected] main -&gt; main (push declined due to email privacy restrictions)<br>error: failed to push some refs to ‘仓库地址url’</p>
+<blockquote>
+<p>解决方法——在GitHub的你账号网页上右上角，个人的登录退出的位置，setting-&gt;emails-&gt;Keep my email address private，把这一项去掉勾选即可。</p>
+</blockquote>
+<h2 id="九-结尾"><a href="#九-结尾" class="headerlink" title="九.结尾"></a>九.结尾</h2><p>学习Git，最重要的是在日常中使用它，从而会越发熟练<br>附上学习网站<br><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">https://learngitbranching.js.org/?locale=zh_CN</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/05/09/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="cl318lt3o0002nkua4y15fdhi" data-title="Git学习笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/03/04/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo的使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" rel="tag">技术教程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" style="font-size: 10px;">技术教程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/09/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Git学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/04/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/">hexo的使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 XXhei<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
