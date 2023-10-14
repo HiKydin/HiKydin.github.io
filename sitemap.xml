@@ -2,16 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://kydins.com/002-openwrt-zhong-gre-diao-xian-wen-ti.html</loc>
-    
-    <lastmod>2023-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://kydins.com/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html</loc>
+    <loc>http://kydins.com/001-c-yu-yan-zhong-jiang-char-1-hui-fa-sheng-shi-me.html</loc>
     
     <lastmod>2023-10-14</lastmod>
     
@@ -29,7 +20,16 @@
   </url>
   
   <url>
-    <loc>http://kydins.com/001-c-yu-yan-zhong-jiang-char-1-hui-fa-sheng-shi-me.html</loc>
+    <loc>http://kydins.com/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html</loc>
+    
+    <lastmod>2023-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kydins.com/002-openwrt-zhong-gre-diao-xian-wen-ti.html</loc>
     
     <lastmod>2023-10-14</lastmod>
     
