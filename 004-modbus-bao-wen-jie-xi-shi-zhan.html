@@ -21,19 +21,19 @@
     <meta name="description" content="ModBus 报文解析实战事情是这样的，项目需要一个串口采集1032协议电压的功能。在实现中还是遇到不少问题，由于是第一次使用，遂做下一些记录。     报文内容使用串口发送 ModBus 报文时，需要解析收到的报文  01 03 04 00 00 41 40 CB 93  这是请求报文：  01：设备地址，表示要访问的 Modbus 设备的地址为1。 03：功能码，表示要读取保持寄存器。 00">
 <meta property="og:type" content="article">
 <meta property="og:title" content="004-ModBus报文解析实战">
-<meta property="og:url" content="http://kydins.com/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:url" content="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan.html">
 <meta property="og:site_name" content="Kydin&#39;s Blog">
 <meta property="og:description" content="ModBus 报文解析实战事情是这样的，项目需要一个串口采集1032协议电压的功能。在实现中还是遇到不少问题，由于是第一次使用，遂做下一些记录。     报文内容使用串口发送 ModBus 报文时，需要解析收到的报文  01 03 04 00 00 41 40 CB 93  这是请求报文：  01：设备地址，表示要访问的 Modbus 设备的地址为1。 03：功能码，表示要读取保持寄存器。 00">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://kydins.com/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_1.png">
-<meta property="og:image" content="http://kydins.com/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_2.png">
-<meta property="og:image" content="http://kydins.com/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_3.jpg">
-<meta property="og:image" content="http://kydins.com/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_4.png">
+<meta property="og:image" content="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan/photo_1.png">
+<meta property="og:image" content="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan/photo_2.png">
+<meta property="og:image" content="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan/photo_3.jpg">
+<meta property="og:image" content="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan/photo_4.png">
 <meta property="article:published_time" content="2023-10-08T01:07:07.000Z">
-<meta property="article:modified_time" content="2023-10-08T13:55:51.000Z">
+<meta property="article:modified_time" content="2023-10-14T09:01:50.439Z">
 <meta property="article:author" content="Kydin">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://kydins.com/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_1.png">
+<meta name="twitter:image" content="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan/photo_1.png">
   
   
   
@@ -317,9 +317,9 @@
               <div class="markdown-body">
                 
                 <h1 id="ModBus-报文解析实战"><a href="#ModBus-报文解析实战" class="headerlink" title="ModBus 报文解析实战"></a>ModBus 报文解析实战</h1><p>事情是这样的，项目需要一个串口采集1032协议电压的功能。在实现中还是遇到不少问题，由于是第一次使用，遂做下一些记录。</p>
-<img src="/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_1.png" srcset="/img/loading.gif" lazyload class="" title="ModBus模拟量Hex">
+<img src="/004-modbus-bao-wen-jie-xi-shi-zhan/photo_1.png" srcset="/img/loading.gif" lazyload class="" title="ModBus模拟量Hex">
 
-<img src="/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_2.png" srcset="/img/loading.gif" lazyload class="" title="ModBus模拟量Float">
+<img src="/004-modbus-bao-wen-jie-xi-shi-zhan/photo_2.png" srcset="/img/loading.gif" lazyload class="" title="ModBus模拟量Float">
 
 <h2 id="报文内容"><a href="#报文内容" class="headerlink" title="报文内容"></a>报文内容</h2><p>使用串口发送 ModBus 报文时，需要解析收到的报文</p>
 <blockquote>
@@ -349,7 +349,7 @@
 <p>注意：这是IEEE 754浮点数</p>
 </blockquote>
 <p>这就是我们需要的电压数据。其实很简单，只需要做一个十六进制转float就可以。</p>
-<img src="/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_3.jpg" srcset="/img/loading.gif" lazyload class="" title="Hex转Float">
+<img src="/004-modbus-bao-wen-jie-xi-shi-zhan/photo_3.jpg" srcset="/img/loading.gif" lazyload class="" title="Hex转Float">
 
 <p>细心的朋友可能发现了，我是使用41400000转换的，这是为什么呢？</p>
 <h2 id="C-语言代码实现"><a href="#C-语言代码实现" class="headerlink" title="C 语言代码实现"></a>C 语言代码实现</h2><h3 id="使用共用体进行类型转换"><a href="#使用共用体进行类型转换" class="headerlink" title="使用共用体进行类型转换"></a>使用共用体进行类型转换</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> <span class="hljs-type">uint8_t</span>;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">short</span> <span class="hljs-type">int</span> <span class="hljs-type">uint16_t</span>;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> <span class="hljs-type">uint32_t</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span>** argv)</span> &#123;<br>  <span class="hljs-type">uint8_t</span> rsp[] = &#123;<span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x41</span>, <span class="hljs-number">0x40</span>&#125;;<br><br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -364,7 +364,7 @@
 <blockquote>
 <p>40 41 00 00</p>
 </blockquote>
-<img src="/2023/10/08/004-ModBus%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90%E5%AE%9E%E6%88%98/photo_4.png" srcset="/img/loading.gif" lazyload class="" title="Float转Hex">
+<img src="/004-modbus-bao-wen-jie-xi-shi-zhan/photo_4.png" srcset="/img/loading.gif" lazyload class="" title="Float转Hex">
 
 <h3 id="寻找正确的12-000000"><a href="#寻找正确的12-000000" class="headerlink" title="寻找正确的12.000000"></a>寻找正确的12.000000</h3><p>所以正确的<code>12.000000</code> 应该是多少呢？</p>
 <p>使用以下函数查看一下：</p>
@@ -385,7 +385,7 @@
 <p>可以看到，我们已经正确解析出了电压值。</p>
 <h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> <span class="hljs-type">uint8_t</span>;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">short</span> <span class="hljs-type">int</span> <span class="hljs-type">uint16_t</span>;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> <span class="hljs-type">uint32_t</span>;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">union</span> &#123;</span><br>  <span class="hljs-type">uint32_t</span> u32;<br>  <span class="hljs-type">float</span> f;<br>&#125; <span class="hljs-type">float_union_t</span>;<br><br><span class="hljs-type">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-type">float</span> <span class="hljs-title function_">utils_get_float_at</span><span class="hljs-params">(<span class="hljs-type">void</span> *data, <span class="hljs-type">int</span> pos)</span> &#123;<br>  <span class="hljs-type">uint8_t</span> __attribute__((aligned(<span class="hljs-number">4</span>))) tmp[<span class="hljs-number">4</span>] = &#123;<span class="hljs-number">0</span>&#125;;<br>  <span class="hljs-built_in">memcpy</span>(tmp, (<span class="hljs-type">uint8_t</span> *)data, <span class="hljs-number">4</span>);<br>  <span class="hljs-type">uint32_t</span> lw = *((<span class="hljs-type">uint32_t</span> *)(((<span class="hljs-type">uint8_t</span> *)(tmp)) + pos));<br>  <span class="hljs-type">float_union_t</span> fu = &#123;.u32 = lw&#125;;<br>  <span class="hljs-keyword">return</span> fu.f;<br>&#125;<br><br><span class="hljs-comment">// true is little endian, flase is big endian</span><br><span class="hljs-type">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">check_cpu</span><span class="hljs-params">()</span> &#123;<br>  <span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">w</span> &#123;</span><br>    <span class="hljs-type">int</span> a;<br>    <span class="hljs-type">char</span> b;<br>  &#125; c;<br>  c.a = <span class="hljs-number">1</span>;<br>  <span class="hljs-keyword">return</span> (c.b == <span class="hljs-number">1</span>);<br>&#125;<br><br><span class="hljs-type">static</span> <span class="hljs-type">void</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">uint16_t</span> data[], <span class="hljs-type">int</span> num)</span> &#123;<br>  <span class="hljs-type">int</span> i, j;<br>  <span class="hljs-type">uint16_t</span> temp;<br><br>  <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>, j = num - <span class="hljs-number">1</span>; i &lt; j; i++, j--) &#123;<br>    temp = data[i];<br>    data[i] = data[j];<br>    data[j] = temp;<br>  &#125;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span> **argv)</span> &#123;<br>  <span class="hljs-type">int</span> rc = <span class="hljs-number">2</span>;<br>  <span class="hljs-type">int</span> offset = <span class="hljs-number">1</span>;<br>  <span class="hljs-type">uint8_t</span> rsp[] = &#123;<span class="hljs-number">0x01</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x04</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x41</span>, <span class="hljs-number">0x40</span>, <span class="hljs-number">0xCB</span>, <span class="hljs-number">0x93</span>&#125;;<br>  <span class="hljs-type">uint16_t</span> dest[<span class="hljs-number">2</span>];<br><br>  bzero(dest, <span class="hljs-keyword">sizeof</span>(dest));<br>  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; rc; i++) &#123;<br>    <span class="hljs-comment">/* shift reg hi_byte to temp OR with lo_byte */</span><br>    dest[i] = (rsp[offset + <span class="hljs-number">2</span> + (i &lt;&lt; <span class="hljs-number">1</span>)] &lt;&lt; <span class="hljs-number">8</span>) | rsp[offset + <span class="hljs-number">3</span> + (i &lt;&lt; <span class="hljs-number">1</span>)];<br>  &#125;<br><br>  <span class="hljs-keyword">if</span> (!check_cpu()) &#123;<br>    reverse(dest, <span class="hljs-number">2</span>);<br>  &#125;<br><br>  <span class="hljs-type">float</span> value = utils_get_float_at(dest, <span class="hljs-number">0</span>);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;value = %f\n&quot;</span>, value);<br><br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-<p>最后还加入了一个对 cpu 的大小端序判断，这样可用性会更强。</p>
+<p>最后还加入了一个对 cpu 的大小端序判断，这样可用性会更强。�性会更强。</p>
 
                 
               </div>
@@ -404,7 +404,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>004-ModBus报文解析实战</div>
-      <div>http://kydins.com/2023/10/08/004-ModBus报文解析实战/</div>
+      <div>http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan.html</div>
     </div>
     <div class="license-meta">
       
@@ -452,7 +452,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/03/003-%E5%85%A5%E6%89%8BVPS%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E4%BA%8B/" title="003-入手VPS后要做的几件事">
+                      <a href="/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html" title="003-入手VPS后要做的几件事">
                         <span class="hidden-mobile">003-入手VPS后要做的几件事</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
