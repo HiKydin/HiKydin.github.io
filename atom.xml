@@ -3,11 +3,11 @@
   <title>Kydin&#39;s Blog</title>
   
   
-  <link href="http://kydins.com/atom.xml" rel="self"/>
+  <link href="https://kydins.com/atom.xml" rel="self"/>
   
-  <link href="http://kydins.com/"/>
+  <link href="https://kydins.com/"/>
   <updated>2023-10-14T09:01:50.000Z</updated>
-  <id>http://kydins.com/</id>
+  <id>https://kydins.com/</id>
   
   <author>
     <name>Kydin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>004-ModBus报文解析实战</title>
-    <link href="http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan.html"/>
-    <id>http://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan.html</id>
+    <link href="https://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan.html"/>
+    <id>https://kydins.com/004-modbus-bao-wen-jie-xi-shi-zhan.html</id>
     <published>2023-10-08T13:07:07.000Z</published>
     <updated>2023-10-14T09:01:50.000Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>003-入手VPS后要做的几件事</title>
-    <link href="http://kydins.com/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html"/>
-    <id>http://kydins.com/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html</id>
+    <link href="https://kydins.com/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html"/>
+    <id>https://kydins.com/003-ru-shou-vps-hou-yao-zuo-de-ji-jian-shi.html</id>
     <published>2023-10-03T16:52:38.000Z</published>
     <updated>2023-10-14T09:01:50.000Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>002-OpenWrt中GRE掉线问题</title>
-    <link href="http://kydins.com/002-openwrt-zhong-gre-diao-xian-wen-ti.html"/>
-    <id>http://kydins.com/002-openwrt-zhong-gre-diao-xian-wen-ti.html</id>
+    <link href="https://kydins.com/002-openwrt-zhong-gre-diao-xian-wen-ti.html"/>
+    <id>https://kydins.com/002-openwrt-zhong-gre-diao-xian-wen-ti.html</id>
     <published>2023-09-26T15:54:54.000Z</published>
     <updated>2023-10-14T09:01:50.000Z</updated>
     
@@ -79,8 +79,8 @@
   
   <entry>
     <title>001-C语言中将char=1会发生什么？</title>
-    <link href="http://kydins.com/001-c-yu-yan-zhong-jiang-char-1-hui-fa-sheng-shi-me.html"/>
-    <id>http://kydins.com/001-c-yu-yan-zhong-jiang-char-1-hui-fa-sheng-shi-me.html</id>
+    <link href="https://kydins.com/001-c-yu-yan-zhong-jiang-char-1-hui-fa-sheng-shi-me.html"/>
+    <id>https://kydins.com/001-c-yu-yan-zhong-jiang-char-1-hui-fa-sheng-shi-me.html</id>
     <published>2023-09-10T15:54:54.000Z</published>
     <updated>2023-10-14T09:01:50.000Z</updated>
     
