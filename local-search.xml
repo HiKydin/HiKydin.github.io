@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>005-PT入坑指北</title>
+    <link href="/005-pt-ru-keng-zhi-bei.html"/>
+    <url>/005-pt-ru-keng-zhi-bei.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="PT-入坑指北"><a href="#PT-入坑指北" class="headerlink" title="PT 入坑指北"></a>PT 入坑指北</h1><h2 id="一、什么是-PT？"><a href="#一、什么是-PT？" class="headerlink" title="一、什么是 PT？"></a>一、什么是 PT？</h2><p>PT（Private Tracker）是一种改良自 BitTorrent 协议的 P2P 下载方式。<code>Private Tracker</code>指私有种子服务器，与 BT 最大的不同点分别为可进行私密范围下载，及可统计每个用户的上载及下载量。</p><h2 id="二、PT-怎么玩？"><a href="#二、PT-怎么玩？" class="headerlink" title="二、PT 怎么玩？"></a>二、PT 怎么玩？</h2><p><strong>PT 站是在私密范围内下载</strong></p><ul><li>只允许本站用户下载，不允许用户将种子公开上传</li><li>PT 站需要内部邀请或者捐赠的形式获得邀请码</li></ul><p>统计上传量和下载量</p><ul><li>网站会统计每一个用户的下载量和上传量，下载量和上传量在一定程度上决定着用户的等级，有没有权限下载文件</li><li>每一个用户注册后会得到一个 passkey，用户从网站里面下载的种子里面包含了私人的 passkey</li><li>通过 passkey 识别每一个用户，统计每一个用户的下载、上传和做种时间</li><li>PT站是「人人为我，我为人人」的资源共享 Team</li></ul><p>新手的话可以先从一些小站开始玩起，将自己的数据养好之后再去各类论坛找大佬求邀请码。</p><h2 id="三、对于新手应该需要知道的"><a href="#三、对于新手应该需要知道的" class="headerlink" title="三、对于新手应该需要知道的"></a>三、对于新手应该需要知道的</h2><p>1、<strong>魔力值</strong>：相当于货币，一般可以通过坚持每日签到&#x2F;做种获得。可以在站内购买上传量&#x2F;下载量&#x2F;邀请名额。</p><ul><li><p>1个魔力值 * <em>你的做种数</em> (做种数最多计7个)</p></li><li><p>每小时获得的魔力值点数由下面的公式给出： </p><p>式中简言之：为做种人数少、文件体积大的种子做种能获得更多魔力值。</p><p><img src="https://image.kydins.com/005-formula.png" alt="formula"></p><ul><li>**A **为中间变量</li><li><strong>Ti</strong> 为第 **i **个种子的生存时间, 即自种子发布起到现在所经过的时间, 单位是周</li><li><strong>T0 <strong>为参数。</strong>T0</strong> &#x3D; 8</li><li>**Si **为第 <strong>i</strong> 个种子的大小，单位是GB</li><li><strong>Ni</strong> 为第 <strong>i</strong> 个种子当前的做种者数</li><li><strong>N0 <strong>为参数。</strong>N0</strong> &#x3D; 7</li><li><strong>Wi</strong> 为第 <strong>i</strong> 个种子的权重系数，默认为 1，零魔种子为 0.2</li></ul><p>做种每小时将得到如下的魔力值</p><ul><li>**B **为1小时中用户获得的做种魔力值点数</li><li><strong>B0</strong> 为参数，代表用户1小时获得魔力值的上限。<strong>B0</strong> &#x3D; 100</li><li><strong>L <strong>为参数。</strong>L</strong> &#x3D; 300</li></ul><p><img src="https://image.kydins.com/005-formula2.png" alt="formula2"></p></li></ul><p>2、<strong>上传量</strong>：就是你做种上传了多少 G 的资源</p><p>3、<strong>下载量</strong>：你从pt站下载了多少 G 的资源</p><p>4、<strong>分享率</strong>：上传量&#x2F;下载量，区分你的整体分享率和独立分享率是很重要的。整体分享率关注的是自从你加入站点以来，账号的整体上传与下载量。而独立分享率则针对每一个你正在下载或做种的文件。</p><p>5、你应该保持一个<strong>良好的分享率</strong>，防止被当作吸血鬼 t 掉，所以你需要了解什么是 <code>[Free] [2x免费] [50%免费]</code></p><p>[Free]：这个资源下载是免费的(不计入下载量)，1倍上传量。</p><p>[2x免费]：这个资源下载是免费的(不计入下载量)，2倍上传量。</p><p>[50%免费]：这个资源0.5倍下载量，1倍上传量。</p><p>新手度过考核期可以一定不要放过这类资源，前期可以快速将上传量刷上去。</p><h2 id="四、软件的选择"><a href="#四、软件的选择" class="headerlink" title="四、软件的选择"></a>四、软件的选择</h2><p>一般来说每个 pt 站对于允许使用的软件都是有要求的，这里需要大家根据情况选择。</p><p>我一般会使用开源软件 <a href="https://transmissionbt.com/">Transmission</a>，注意，<strong>请不要使用迅雷！</strong></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>004-ModBus报文解析实战</title>
     <link href="/004-modbus-bao-wen-jie-xi-shi-zhan.html"/>
     <url>/004-modbus-bao-wen-jie-xi-shi-zhan.html</url>
