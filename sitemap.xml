@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kydins.com/008-c-yu-yan-zhong-shi-yong-libcurl-shi-xian-duo-xian-cheng-xia-zai.html</loc>
+    
+    <lastmod>2024-01-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kydins.com/about/index.html</loc>
     
     <lastmod>2024-01-13</lastmod>
@@ -76,7 +85,7 @@
 
   <url>
     <loc>https://kydins.com/</loc>
-    <lastmod>2024-01-13</lastmod>
+    <lastmod>2024-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
